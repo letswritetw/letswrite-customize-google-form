@@ -1,5 +1,5 @@
 ### 使用教學文：
-[Medium：完全客製google表單，美化表單樣式](https://medium.com/@augustus0818/customized-google-form-and-post-data-bcf1d6e1861b)
+[Medium：完全客製google表單，美化表單樣式](https://letswrite.tw/custom-google-form/)
 
 
 ---
