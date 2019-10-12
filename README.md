@@ -1,12 +1,12 @@
 ### 使用教學文：
-[Medium：完全客製google表單，美化表單樣式](https://letswrite.tw/custom-google-form/)
+[Let's Write：完全客製google表單，美化表單樣式](https://letswrite.tw/custom-google-form/)
 
 
 ---
 
 
 ### 測試頁面：
-[https://auguston.github.io/medium-customize-google-form/](https://auguston.github.io/medium-customize-google-form/)
+[https://auguston.github.io/medium-customize-google-form/](https://auguston.github.io/letswrite-customize-google-form/)
 
 
 ---
