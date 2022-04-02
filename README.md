@@ -1,5 +1,5 @@
 ### 使用教學文：
-[Let's Write：完全客製google表單，美化表單樣式](https://letswrite.tw/custom-google-form/)
+[Let's Write：完全客製google表單，美化表單樣式](https://www.letswrite.tw/custom-google-form/)
 
 
 ---
