@@ -35,7 +35,7 @@
       height: 100%;
     }
     .bg {
-      background: url('https://fakeimg.pl/1920x1024/?text=KV') center center;
+      background: url('https://fakeimg.pl/1920x1024/?text=SercertPlace') center center;
       background-size: cover;
     }
     .form {
@@ -88,22 +88,22 @@
 
   <link rel="shortcut icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png"/>
 
-  <!-- Google Tag Manager-->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PGQ9WQT');
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TLF6F2C');</script>
+  <!-- End Google Tag Manager -->
 
 </head>
+
 <body>
 
-  <!-- Google Tag Manager (noscript)-->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLF6F2C"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <div class="container">
     <main class="row">
@@ -112,54 +112,50 @@
       
       <!-- form -->
       <section class="six columns half form">
-        <h1>Contact us</h1>
+        <h1>盒買+1 團購訂單</h1>
         <form>
           <!-- 姓名 -->
           <div class="input-group">
-            <label for="demo_name">姓名</label>
-            <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="demo_name">
+            <label for="demo_order">下單區</label>
+            <input class="u-full-width" type="textarea" placeholder="盒1+200" id="demo_order">
           </div>
 
-          <!-- 性別 -->
           <div class="input-group">
-            <label>姓別</label>
-            <div class="radio-group row">
-              <!-- 男性 -->
-              <div class="four columns">
-                <input type="radio" id="male" name="demo_radio" value="male" checked>
-                <label for="male">男性</label>
-              </div>
-
-              <!-- 女性 -->
-              <div class="four columns">
-                <input type="radio" id="female" name="demo_radio" value="female">
-                <label for="female">女性</label>
-              </div>
-
-              <!-- 法人 -->
-              <div class="four columns">
-                <input type="radio" id="legal" name="demo_radio" value="legal">
-                <label for="legal">法人</label>
-              </div>
-            </div>
+            <label for="demo_need">其他需求</label>
+            <input class="u-full-width" type="text" placeholder="我想做客製化" id="demo_need">
           </div>
 
-          <!-- 詢問類別 -->
           <div class="input-group">
-            <label for="demo_select">詢問類別</label>
-            <select class="u-full-width" id="demo_select">
-              <option value="0" value="0" selected disabled>請選擇</option>
-              <option value="cat">貓類</option>
-              <option value="dog">狗類</option>
-              <option value="bear">熊類</option>
-            </select>
+            <label for="demo_name">大名/店名(可二選一填寫)</label>
+            <input class="u-full-width" type="text" placeholder="甜蜜秘境/Linda" id="demo_name">
           </div>
 
-          <!-- 詢問內容 -->
           <div class="input-group">
-            <label for="demo_textarea">詢問內容</label>
-            <textarea class="u-full-width" id="demo_textarea"></textarea>
+            <label for="demo_address">收貨地址</label>
+            <input class="u-full-width" type="text" placeholder="請完整打出收件地址" id="demo_address">
           </div>
+
+          <div class="input-group">
+            <label for="demo_phone">聯絡電話</label>
+            <input class="u-full-width" type="text" placeholder="物流能聯絡到您的都可以~" id="demo_phone">
+          </div>
+
+          <div class="input-group">
+            <label for="demo_lineid">Lind ID</label>
+            <input class="u-full-width" type="text" placeholder="方便與您核對訂單" id="demo_lineid">
+          </div>
+
+          <div class="input-group">
+            <label for="demo_gui">統一編號</label>
+            <input class="u-full-width" type="text" placeholder="是否需要打統編呢?" id="demo_gui">
+          </div>
+
+          <div class="input-group">
+            <label for="demo_email">電子信箱</label>
+            <input class="u-full-width" type="text" placeholder="test@gmail.com" id="demo_email">
+          </div>
+
+          
 
           <button type="button" id="submit" class="button-primary u-full-width">確認送出</button>
 
@@ -173,34 +169,47 @@
     $(function() {
       $('#submit').on('click', function() {
         
-        // 姓名
+        // 下單區
+        var order = $('#demo_order').val() || '未填寫';
+
+        // 其他需求
+        var need = $('#demo_need').val() || '未填寫';
+
+        // 店名
         var name = $('#demo_name').val() || '未填寫';
 
-        // 性別
-        var sex = function() {
-          var v;
-          $('[name="demo_radio"]').each(function() {
-            if($(this).prop('checked') === true) v = $(this).val();
-          });
-          return v;
-        };
+        // 收貨地址
+        var address = $('#demo_address').val() || '未填寫';
 
-        // 類別
-        var cat = $('#demo_select').val() || '未填寫';
+        //連絡電話
+        var phone = $('#demo_phone').val() || '未填寫';
 
-        // 內容
-        var msg = $('#demo_textarea').val() || '未填寫';
+        //LINE
+        var lineid = $('#demo_lineid').val() || '未填寫';
+
+        //統編
+        var gui = $('#demo_gui').val() || '未填寫';
+
+        //電子信箱
+        var email = $('#demo_email').val() || '未填寫';
+
+
 
         // post
-        var data = {
-          'entry.248434920': name,
-          'entry.1569038925': sex(),
-          'entry.1509045370': cat,
-          'entry.758411200': msg
+        var data={
+          'entry.1309609410': order,
+          'entry.1495583811': need,
+          'entry.1022483502': name,
+          'entry.1903384411': address,
+          'entry.564969400': phone,
+          'entry.904682548': lineid,
+          'entry.1960001502': gui,
+          'entry.595270664': email
+          
         };
         $.ajax({
           type: 'POST',
-          url: 'https://docs.google.com/forms/d/e/1FAIpQLSeTgHEpVpuV_OHakO-25X-O7I4T1tIzIAUqHWLRvUqG9e6TvQ/formResponse',
+          url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHj4D-qfsuazv4_omLccp3BjGV6kUH5c6Tk5mWf3tA6cZ3PQ/formResponse',
           data: data,
           contentType: 'application/json',
           dataType: 'jsonp',
